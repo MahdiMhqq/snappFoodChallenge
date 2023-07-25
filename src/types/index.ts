@@ -1,6 +1,6 @@
 export interface IVendor {
   id: number;
-  
+
   logo: string;
   backgroundImage: string;
 
@@ -53,4 +53,11 @@ export interface IPagedVendorList {
   open_count: number;
 }
 
-export type TVendorListRequestResult = IRequestResult<IPagedVendorList>;
+export interface IVendorGetParams {
+  page: number;
+  page_size: number;
+  lat: number;
+  long: number;
+}
+
+export type VendorListRequestResult = IRequestResult<IPagedVendorList>;

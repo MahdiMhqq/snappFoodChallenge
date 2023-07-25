@@ -1,14 +1,20 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-
 import "../assets/styles/globals.scss";
+
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+
 import Routings from "./Router";
+
+import store from "store";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routings />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routings />
+      </BrowserRouter>
+    </Provider>
   );
 }
 

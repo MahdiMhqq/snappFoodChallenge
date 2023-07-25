@@ -31,11 +31,11 @@ function VendorCard({ className = "", vendor }: IVendorCardProps) {
           <div className={styles.vendorCard__title}>
             <h6 className={styles.vendorCard__vendorTitle}>
               {vendor.title}
-              {vendor.discountValueForView && (
+              {vendor.discountValueForView ? (
                 <span className={styles.vendorCard__discount}>
                   تا {vendor.discountValueForView}٪
                 </span>
-              )}
+              ) : null}
             </h6>
             <Rating vendor={vendor} />
           </div>
