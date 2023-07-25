@@ -1,0 +1,71 @@
+.vendorCard {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: $card-shadow-2;
+  border: 0.5px solid $divider;
+
+  &__descSection {
+    position: relative;
+    padding: 1.25rem 1rem 0.5rem;
+  }
+
+  &__logo {
+    position: absolute;
+    right: 0.5rem;
+    top: -3rem;
+  }
+
+  &__title {
+    @include flex(space-between, center);
+    margin-bottom: 0.5rem;
+  }
+
+  &__discount {
+    display: inline-block;
+    margin-right: 0.25rem;
+    border-radius: 0.25rem;
+    padding: 2px;
+    color: $text-white;
+    background-color: $primary;
+    font-size: $text-small;
+    line-height: $text-small;
+  }
+
+  &__vendorTitle {
+    font-size: $text-medium;
+    font-weight: $font-medium;
+    color: $text-color;
+    @extend %ellipsis;
+    max-width: 80%;
+    @include flex(center, center);
+  }
+
+  &__desc {
+    font-size: $text-small;
+    color: $text-color;
+    width: 100%;
+    @extend %ellipsis;
+    margin-bottom: 0.5rem;
+  }
+
+  &__delivery {
+    @include flex(space-between, center);
+    font-size: $text-small;
+    color: $text-color-light;
+    @extend %ellipsis;
+  }
+
+  &__fee {
+    color: $text-color;
+    margin-right: 0.25rem;
+  }
+
+  &__eta {
+    @include flex(center, center);
+    font-size: $text-small;
+    line-height: $text-small;
+    font-weight: $font-medium;
+    color: $text-color-light;
+    margin-bottom: 2px;
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 0.5rem 0 0 0.5rem;
+  width: 100%;
+  @include flex(auto, flex-start);
+
+  &__ad {
+    width: 30%;
+    margin-right: auto;
+    flex-shrink: 0;
+    @include flex(flex-end, flex-start);
+    &-chip {
+      width: max-content;
+      @include flex(center, center);
+      padding: 0.25rem 0.3rem;
+      background-color: $bg-main;
+
+      border-radius: 999px;
+      color: $text-color-light;
+      font-weight: $font-regular;
+      font-size: $text-small;
+
+      svg {
+        height: 0.75rem;
+      }
+    }
+  }
+
+  &__coupons {
+    @include flex(null, null, column);
+    gap: 0.25rem 0;
+    max-width: 100%;
+    &-small {
+      width: 60%;
+      flex-shrink: 0;
+    }
+  }
+}

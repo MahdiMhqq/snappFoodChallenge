@@ -1,0 +1,23 @@
+/*************** Custom MIXINS *******************/
+/* Position Mixin */
+@mixin pos(
+  $position: absolute,
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null
+) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+/* flex box mixin */
+@mixin flex($pos-x, $pos-y, $dir: null) {
+  display: flex;
+  justify-content: $pos-x;
+  align-items: $pos-y;
+  flex-direction: $dir;
+}

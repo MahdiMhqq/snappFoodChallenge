@@ -1,0 +1,66 @@
+:root {
+  --c-primary: #ff00a4;
+  --c-white: #fff;
+
+  //BACKGROUNDS
+  --c-bg-main: #fff;
+  --bg-success: rgba(34, 169, 88, 0.06);
+  --bg-placeholder: #EDEDED;
+  
+  //TEXTS
+  --t-color-light: #a3a3a3;
+  --t-color: #404040;
+  --t-white: #fff;
+  --t-green: #22a958;
+  --t-black: #000000;
+  --t-primary: #ff00a4;
+
+  //Feedbacks
+  --c-dsuccess: #22a958;
+  --c-success: #5ba839;
+  --c-error: #bd272d;
+
+  //STARS
+  --star-45: #3f7e00;
+  --star-40: #5ba839;
+  --star-35: #9acd32;
+  --star-30: #cdd614;
+  --star-25: #ffba00;
+  --star-20: #ff7800;
+  --star-15: #ff2717;
+  --star-10: #c10914;
+
+  //GRAY
+  --c-gray: #979797;
+  --alpha-carbon-gray: rgba(64, 64, 64, 0.04);
+
+  //LINES
+  --c-divider: #e6e6e6;
+
+  //SHADOWS
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow-1: 0 2px 8px 0 var(--card-shadow);
+  --vendors-card-shadow: rgba(64, 64, 64, 0.12);
+  --card-shadow-2: 0 2px 12px 0 var(--card-shadow);
+  --card-shadow-3: 0 2px 6px 0 var(--card-shadow);
+
+  //TYPOGRAPHY
+  --text-small: 12px;
+  --text-medium: 14px;
+  --text-size: 16px;
+  --text-large: 17px;
+  --text-m-large: 18px;
+  --text-x-large: 20px;
+  --text-xx-large: 22px;
+  --text-xxx-large: 24px;
+  --text-xxxx-large: 32px;
+
+  --font-ultraLight: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 600;
+  --font-bolder: 700;
+
+  --font-default: iransans
+}

@@ -1,0 +1,64 @@
+$primary: var(--c-primary);
+$white: var(--c-white);
+
+//BACKGROUNDS
+$bg-main: var(--c-bg-main);
+$bg-success: var(--bg-success);
+$bg-placeholder: var(--bg-placeholder);
+
+//TEXTS
+$text-color-light: var(--t-color-light);
+$text-color: var(--t-color);
+$text-white: var(--t-white);
+$text-green: var(--t-green);
+$text-black: var(--t-black);
+$text-primary: var(--t-primary);
+
+//Feedbacks
+$dsuccess: var(--c-dsuccess);
+$success: var(--c-success);
+$error: var(--c-error);
+
+//STARS
+$star-45: var(--star-45);
+$star-40: var(--star-40);
+$star-35: var(--star-35);
+$star-30: var(--star-30);
+$star-25: var(--star-25);
+$star-20: var(--star-20);
+$star-15: var(--star-15);
+$star-10: var(--star-10);
+
+//GRAY
+$gray: var(--c-gray);
+$alpha-carbon-grey: var(--alpha-carbon-gray);
+
+//LINES
+$divider: var(--c-divider);
+
+//SHADOWS
+$card-shadow: var(--card-shadow);
+$card-shadow-1: var(--card-shadow-1);
+$vendors-card-shadow: var(--vendors-card-shadow);
+$card-shadow-2: var(--card-shadow-2);
+$card-shadow-3: var(--card-shadow-3);
+
+//TYPOGRAPHY
+$text-small: var(--text-small);
+$text-medium: var(--text-medium);
+$text-size: var(--text-size);
+$text-large: var(--text-large);
+$text-m-large: var(--text-m-large);
+$text-x-large: var(--text-x-large);
+$text-xx-large: var(--text-xx-large);
+$text-xxx-large: var(--text-xxx-large);
+$text-xxxx-large: var(--text-xxxx-large);
+
+$font-ultraLight: var(--font-ultraLight);
+$font-light: var(--font-light);
+$font-regular: var(--font-regular);
+$font-medium: var(--font-medium);
+$font-bold: var(--font-bold);
+$font-bolder: var(--font-bolder);
+
+$font-default: var(--font-default);

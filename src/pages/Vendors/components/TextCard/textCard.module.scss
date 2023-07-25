@@ -1,0 +1,13 @@
+.textCard {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: $card-shadow-2;
+  border: 0.5px solid $divider;
+
+  &__title {
+    font-weight: $font-medium;
+    font-size: $text-large;
+    color: $text-color;
+  }
+}

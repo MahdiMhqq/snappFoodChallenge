@@ -1,0 +1,13 @@
+.button {
+  @include flex(center, center);
+  position: relative;
+  background-color: $primary;
+  font-weight: $font-bold;
+  color: $text-white;
+  font-size: $text-large;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: none;
+  cursor: pointer;
+}

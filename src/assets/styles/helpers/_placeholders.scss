@@ -1,0 +1,27 @@
+@import './variables';
+// -------- Global PLACE HOLDERS
+/* text-shortening placeholder */
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Project PLACEHOLDERS
+%rtl {
+  direction: rtl;
+}
+
+%ltr {
+  direction: ltr;
+}
+
+%no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}

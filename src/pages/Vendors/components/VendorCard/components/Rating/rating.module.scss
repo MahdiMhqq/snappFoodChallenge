@@ -1,0 +1,25 @@
+.rating {
+  @include flex(null, center);
+  font-size: $text-small;
+  color: $text-color-light;
+  &__star {
+    height: 1rem;
+    position: relative;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    padding: 0.125rem 0.25rem;
+    @include flex(center, center);
+    gap: 0 0.25rem;
+    margin-right: 0.25rem;
+    svg {
+      color: inherit;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    background-color: currentColor;
+    inset: 0;
+    opacity: 0.15;
+  }
+}

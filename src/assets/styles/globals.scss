@@ -1,0 +1,65 @@
+@import "./vars.scss";
+
+@font-face {
+  font-family: "iransans";
+  src: url("https://cdn.snappfood.ir/pwa/assets/fonts/woff2/IRANSansWeb.eot"),
+    url("https://cdn.snappfood.ir/pwa/assets/fonts/woff2/IRANSansWeb.woff2")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  direction: rtl;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-default), -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  max-width: 48rem;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background-color: $bg-main;
+  // font-size: $text-small;
+  color: $text-color;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: $bg-main;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $bg-main;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 9999px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+.test {
+  color: $text-primary;
+  font-size: $font-bold;
+}
