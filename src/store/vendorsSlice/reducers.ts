@@ -5,10 +5,17 @@ import { IVendorStore } from "store/types";
 export const reducers = {
   updateGeoLocation: (
     state: IVendorStore,
-    action: PayloadAction<Pick<IVendorStore, "lat" | "long">>
+    action: PayloadAction<Partial<Pick<IVendorStore, "lat" | "long">>>
   ) => {
-    state.lat = action.payload.lat;
-    state.long = action.payload.long;
+    const { lat, long } = action.payload;
+    if (
+      (typeof lat === "number" && lat !== state.lat) ||
+      (typeof long === "number" && long !== state.long)
+    ) {
+      state.lat = action.payload.lat ?? state.lat;
+      state.long = action.payload.long ?? state.long;
+      state.vendors = [];
+    }
   },
 
   incrementPage: (state: IVendorStore) => {
