@@ -7,9 +7,12 @@ interface IVendorCardLoadingProps {
   className?: string;
 }
 
-function VendorCardLoading({ className = "" }: IVendorCardLoadingProps) {
+const VendorCardLoading = React.forwardRef<
+  HTMLDivElement,
+  IVendorCardLoadingProps
+>(({ className = "" }, ref) => {
   return (
-    <div className={clsx(styles.cardLoading, className)}>
+    <div className={clsx(styles.cardLoading, className)} ref={ref}>
       <div
         className={clsx(
           styles.cardLoading__cover,
@@ -38,6 +41,8 @@ function VendorCardLoading({ className = "" }: IVendorCardLoadingProps) {
       </div>
     </div>
   );
-}
+});
+
+VendorCardLoading.displayName = "VendorCardLoading";
 
 export default VendorCardLoading;

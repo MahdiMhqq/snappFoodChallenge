@@ -19,6 +19,6 @@ export const reducers = {
   },
 
   incrementPage: (state: IVendorStore) => {
-    state.page = +1;
+    state.page += 1;
   },
 };

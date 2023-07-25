@@ -6,6 +6,7 @@ import useGeolocation from "hooks/useGeoLocation";
 import useGetVendors from "hooks/useGetVendors";
 
 import { incrementPage, updateGeoLocation, useAppDispatch } from "store";
+import InfiniteScrollBottomCard from "./components/InfiniteScrollBottomCard";
 
 function VendorsPage() {
   //GEO LOCATION
@@ -35,14 +36,18 @@ function VendorsPage() {
 
   return (
     <div style={{ padding: "1rem" }}>
-      <VendorList vendors={vendors} loading={loading} />
-      <button
+      <VendorList
+        vendors={vendors}
+        loading={loading}
+        hasNextPage={hasNextPage}
+      />
+      {/* <button
         style={{ marginTop: "1rem" }}
-        onClick={() => dispatch(incrementPage())}
+        onClick={() => }
         disabled={!hasNextPage}
       >
         Load More
-      </button>
+      </button> */}
     </div>
   );
 }
