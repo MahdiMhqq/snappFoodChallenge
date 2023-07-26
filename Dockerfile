@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN npm ci
-
+RUN npm i -g craco
 COPY . ./
 RUN npm run build
 
