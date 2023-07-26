@@ -4,6 +4,7 @@ Welcome to the Snapp Food Code Challenge repository! This project showcases a Re
 
 ### Preview Link
 
+### NOTICE: Turn off your VPN/PROXY before visit
 **[PREVIEW](https://snappfood.darkube.app/)**
 
 ### Main Technologies
