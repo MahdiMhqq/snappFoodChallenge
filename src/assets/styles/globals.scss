@@ -1,13 +1,5 @@
 @import "./vars.scss";
-
-@font-face {
-  font-family: "iransans";
-  src: url("https://cdn.snappfood.ir/pwa/assets/fonts/woff2/IRANSansWeb.eot"),
-    url("https://cdn.snappfood.ir/pwa/assets/fonts/woff2/IRANSansWeb.woff2")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import "./fonts.scss";
 
 html,
 body {
