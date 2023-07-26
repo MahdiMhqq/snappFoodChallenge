@@ -1,43 +1,46 @@
 import clsx from "clsx";
+import AutoSizer from "react-virtualized-auto-sizer";
+import { VariableSizeList as List } from "react-window";
 
-import TextCard from "../TextCard";
-import VendorCard from "../VendorCard";
+import styles from "./vendorList.module.scss";
+
 import VendorCardLoading from "../VendorCardLoading";
-import InfiniteScrollBottomCard from "../InfiniteScrollBottomCard";
+import VirtualRow from "./VirtualRow";
+
+import { getItemSize } from "./services";
 
 import type { IVendorCardData } from "types";
 
 interface IVendorListProps {
-  className?: string;
   vendors: IVendorCardData[];
   loading?: boolean;
-  hasNextPage?: boolean;
 }
 
-function VendorList({
-  className = "",
-  vendors,
-  loading = false,
-  hasNextPage = true,
-}: IVendorListProps) {
+function VendorList({ vendors, loading = false }: IVendorListProps) {
   return (
-    <div
-      className={clsx(className)}
-      style={{ display: "flex", flexDirection: "column", gap: "0.5rem 0" }}
-    >
+    <div className={styles.vendorList}>
       {loading && vendors.length === 0 ? (
-        [...new Array(10)].map((_, index) => <VendorCardLoading key={index} />)
+        [...new Array(10)].map((_, index) => (
+          <VendorCardLoading
+            key={index}
+            className={styles.vendorList__loadingCard}
+          />
+        ))
       ) : (
-        <>
-          {vendors?.map((vendor) =>
-            vendor?.type === "TEXT" ? (
-              <TextCard data={vendor.data} key={vendor.data} />
-            ) : vendor.type === "VENDOR" ? (
-              <VendorCard key={vendor.data.id} vendor={vendor.data} />
-            ) : null
+        <AutoSizer>
+          {({ height, width }: { height: number; width: number }) => (
+            <List
+              width={width}
+              height={height}
+              itemCount={vendors.length + 1}
+              direction="rtl"
+              itemSize={(index) => getItemSize(index, vendors)}
+              itemData={vendors}
+            >
+              {VirtualRow}
+            </List>
           )}
-          {hasNextPage && <InfiniteScrollBottomCard />}
-        </>
+        </AutoSizer>
       )}
     </div>
   );

@@ -37,4 +37,4 @@ function Rating({ className = "", vendor }: IRatingProps) {
   );
 }
 
-export default Rating;
+export default React.memo(Rating);

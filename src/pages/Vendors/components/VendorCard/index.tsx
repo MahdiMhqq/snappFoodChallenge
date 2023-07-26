@@ -62,4 +62,13 @@ function VendorCard({ className = "", vendor }: IVendorCardProps) {
   );
 }
 
-export default VendorCard;
+export default React.memo(VendorCard, (prev, next) => {
+  const {
+    vendor: { id: prevId },
+  } = prev;
+  const {
+    vendor: { id: nextId },
+  } = next;
+
+  return prevId === nextId;
+});

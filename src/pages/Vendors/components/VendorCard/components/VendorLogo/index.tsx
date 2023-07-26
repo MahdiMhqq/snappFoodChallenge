@@ -31,4 +31,4 @@ function VendorLogo({ className = "", src, alt }: IVendorLogoProps) {
   );
 }
 
-export default VendorLogo;
+export default React.memo(VendorLogo);

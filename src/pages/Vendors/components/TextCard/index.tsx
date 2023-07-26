@@ -16,4 +16,4 @@ function TextCard({ className = "", data }: ITextCardProps) {
   );
 }
 
-export default TextCard;
+export default React.memo(TextCard);

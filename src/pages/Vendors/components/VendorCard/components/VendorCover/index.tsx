@@ -35,4 +35,13 @@ function VendorCover({ className = "", vendor }: IVendorCoverProps) {
   );
 }
 
-export default VendorCover;
+export default React.memo(VendorCover, (prev, next) => {
+  const {
+    vendor: { id: prevId },
+  } = prev;
+  const {
+    vendor: { id: nextId },
+  } = next;
+
+  return prevId === nextId;
+});

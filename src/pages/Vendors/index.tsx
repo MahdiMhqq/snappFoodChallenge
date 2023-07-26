@@ -5,8 +5,7 @@ import VendorList from "./components/VendorList";
 import useGeolocation from "hooks/useGeoLocation";
 import useGetVendors from "hooks/useGetVendors";
 
-import { incrementPage, updateGeoLocation, useAppDispatch } from "store";
-import InfiniteScrollBottomCard from "./components/InfiniteScrollBottomCard";
+import { updateGeoLocation, useAppDispatch } from "store";
 
 function VendorsPage() {
   //GEO LOCATION
@@ -16,11 +15,9 @@ function VendorsPage() {
   const dispatch = useAppDispatch();
 
   //FETCH CUSTOM HOOK
-  const {
-    vendors,
-    hasNextPage,
-    loading: fetchLoading,
-  } = useGetVendors({ skip: geoLoading });
+  const { vendors, loading: fetchLoading } = useGetVendors({
+    skip: geoLoading,
+  });
 
   //VARIABLES
   const loading = geoLoading || fetchLoading;
@@ -35,12 +32,8 @@ function VendorsPage() {
   }, [lat, long, geoLoading]);
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <VendorList
-        vendors={vendors}
-        loading={loading}
-        hasNextPage={hasNextPage}
-      />
+    <main>
+      <VendorList vendors={vendors} loading={loading} />
       {/* <button
         style={{ marginTop: "1rem" }}
         onClick={() => }
@@ -48,7 +41,7 @@ function VendorsPage() {
       >
         Load More
       </button> */}
-    </div>
+    </main>
   );
 }
 
