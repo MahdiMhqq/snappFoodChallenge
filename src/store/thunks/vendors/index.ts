@@ -1,9 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { AxiosResponse } from "axios";
-import { RootState } from "store";
 
 import API from "store/api";
 
+import { AxiosError, type AxiosResponse } from "axios";
+import type { RootState } from "store";
 import type { IVendorGetParams, VendorListRequestResult } from "types";
 
 const fetchVendors = createAsyncThunk<
@@ -22,7 +22,20 @@ const fetchVendors = createAsyncThunk<
     );
     return res.data;
   } catch (error) {
-    return rejectWithValue(error);
+    let strError = "";
+
+    if (error instanceof AxiosError) {
+      console.log("axios", error);
+      if (typeof error.response?.data?.error === "string")
+        strError = error.response?.data?.error;
+      else strError = error.message;
+    } else if (typeof error === "string") {
+      strError = error;
+    } else if (typeof error === "object") {
+      strError = JSON.stringify(error);
+    } else strError = "unknown";
+
+    return rejectWithValue(strError);
   }
 });
 

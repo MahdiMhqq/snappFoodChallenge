@@ -15,7 +15,11 @@ function VendorsPage() {
   const dispatch = useAppDispatch();
 
   //FETCH CUSTOM HOOK
-  const { vendors, loading: fetchLoading } = useGetVendors({
+  const {
+    vendors,
+    loading: fetchLoading,
+    err,
+  } = useGetVendors({
     skip: geoLoading,
   });
 
@@ -33,14 +37,7 @@ function VendorsPage() {
 
   return (
     <main>
-      <VendorList vendors={vendors} loading={loading} />
-      {/* <button
-        style={{ marginTop: "1rem" }}
-        onClick={() => }
-        disabled={!hasNextPage}
-      >
-        Load More
-      </button> */}
+      <VendorList vendors={vendors} loading={loading} error={err} />
     </main>
   );
 }

@@ -26,9 +26,13 @@ const vendorsSlice = createSlice({
       .addCase(fetchVendors.pending, (state) => {
         state.loading = true;
       })
-      .addCase(fetchVendors.rejected, (state, { error }) => {
+      .addCase(fetchVendors.rejected, (state, { payload, error }) => {
         state.loading = false;
-        state.err = error.message?.toString() ?? null;
+        console.log({ payload });
+        state.err =
+          typeof payload === "string"
+            ? payload
+            : error.message?.toString() ?? null;
       })
       .addCase(fetchVendors.fulfilled, (state, { payload }) => {
         const newVendors = [...state.vendors, ...payload.data.finalResult];
