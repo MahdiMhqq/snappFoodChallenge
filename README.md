@@ -4,7 +4,7 @@ Welcome to the Snapp Food Code Challenge repository! This project showcases a Re
 
 ### Preview Link
 
-**[PREVIEW](https://snapp-food-challenge.vercel.app/)**
+**[PREVIEW](https://snappfood.darkube.app/)**
 
 ### Main Technologies
 
@@ -18,7 +18,7 @@ The project is primarily built using the following technologies:
 ### Features
 
 :white_check_mark: **1. Vendors Virtual List**:
-Utilizing the [react-window](https://snappfood.darkube.app/) library, i have implemented a virtual list for vendors. This ensures efficient rendering of long lists, resulting in a smooth user experience.
+Utilizing the [react-window](https://react-window.vercel.app/) library, i have implemented a virtual list for vendors. This ensures efficient rendering of long lists, resulting in a smooth user experience.
 
 :white_check_mark: **2. Vendor Card with Pixel Perfect Match**:
 The vendor card in this application has been implement to achieve a pixel-perfect match with the main website.
