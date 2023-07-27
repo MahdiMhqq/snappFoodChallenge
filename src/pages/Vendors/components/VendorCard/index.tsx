@@ -44,9 +44,11 @@ function VendorCard({ className = "", vendor }: IVendorCardProps) {
           </div>
           <div className={styles.vendorCard__delivery}>
             <p className={styles.vendorCard__bike}>
-              <span>{vendor.isZFExpress ? "اسنپ اکسپرس" : "پیک فروشنده"}</span>
+              <span>{vendor.isZFExpress ? " اسنپ اکسپرس" : " پیک فروشنده"}</span>
               <span className={styles.vendorCard__fee}>
-                {vendor.deliveryFee.toLocaleString()} تومان
+                {vendor.deliveryFee
+                  ? vendor.deliveryFee.toLocaleString() + " تومان"
+                  : "رایگان"}
               </span>
             </p>
             {vendor.eta && vendor?.eta > 0 && (
